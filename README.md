@@ -12,12 +12,5 @@ $ cd ToDoListAPI-go-postgres
 $ docker-compose up
 $ go run main.go 
 ```
-Para preparar o swagger
-
-```
-$ cd ToDoListAPI-go-postgres
-$ cd swagger
-
-```
 
 

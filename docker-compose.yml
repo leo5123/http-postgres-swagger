@@ -5,11 +5,11 @@ services:
     environment:
       - POSTGRES_USER=tarefa
       - POSTGRES_PASSWORD=tarefa
-      - POSTGRES_DB=tarefa      
+      - POSTGRES_DB=tarefa
     ports:
       - "5432:5432"
     volumes:
-      - ./migration/docker-database-initial.sql:/docker-entrypoint-initdb.d/docker-database-initial.sql   
+      - ./migration/docker-database-initial.sql:/docker-entrypoint-initdb.d/docker-database-initial.sql
 
   pgadmin-compose:
     image: dpage/pgadmin4
@@ -20,3 +20,13 @@ services:
       - "54321:80"
     depends_on:
       - postgres
+
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    container_name: "swagger-ui"
+    ports:
+      - "81:8080"
+    volumes:
+      - ./swagger/openapi.yaml:/openapi.yaml
+    environment:
+      SWAGGER_JSON: /openapi.yaml

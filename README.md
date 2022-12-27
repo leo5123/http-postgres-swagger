@@ -10,6 +10,7 @@ Para rodar esse projeto, instale-o localmente usando o npm:
 ```
 $ cd ToDoListAPI-go-postgres
 $ go run main.go 
+$ docker-compose up
 ```
 Para preparar o swagger para o uso
 

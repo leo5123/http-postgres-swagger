@@ -9,8 +9,8 @@ Para rodar esse projeto, instale-o localmente usando o go:
 
 ```
 $ cd ToDoListAPI-go-postgres
-$ go run main.go 
 $ docker-compose up
+$ go run main.go 
 ```
 Para preparar o swagger
 
@@ -18,8 +18,6 @@ Para preparar o swagger
 $ cd ToDoListAPI-go-postgres
 $ cd swagger
 
-$ docker pull swaggerapi/swagger-editor
-$ docker run -p 81:8080 -v ${pwd}:/tmp -e SWAGGER_FILE=/tmp/openapi.yaml swaggerapi/swagger-editor
 ```
 
 

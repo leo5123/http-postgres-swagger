@@ -46,7 +46,7 @@ func DeletaUmaTarefa(w http.ResponseWriter, r *http.Request) {
 
 	var tarefaParaDeletar models.Tarefa
 	database.DB.Delete(&tarefaParaDeletar, id)
-	json.NewEncoder(w).Encode(tarefaParaDeletar)
+	json.NewEncoder(w).Encode("Tarefa " + id + " deletada")
 }
 
 func PersonalidadeFiltrada(w http.ResponseWriter, r *http.Request) {

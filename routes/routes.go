@@ -21,6 +21,12 @@ func HandleRequest() {
 	r.HandleFunc("/api/tarefas", controllers.CriaUmaTarefa).Methods("Post")
 	r.HandleFunc("/api/tarefas/{id}", controllers.EditarUmaTarefa).Methods("Put")
 	r.HandleFunc("/api/tarefas/{id}", controllers.DeletaUmaTarefa).Methods("Delete")
+	headersOk := handlers.AllowedHeaders([]string{"Accept", "Accept-Language", "Content-Type", "Content-Language", "Origin"})
+	originsOk := handlers.AllowedOrigins([]string{"*"})
+	methodsOk := handlers.AllowedMethods([]string{"GET", "HEAD", "POST", "PUT", "OPTIONS", "DELETE"})
 
-	log.Fatal(http.ListenAndServe(":5050", handlers.CORS(handlers.AllowedOrigins([]string{"*"}))(r)))
+	// start server listen
+	// with error handling
+	log.Fatal(http.ListenAndServe(":5050", handlers.CORS(originsOk, headersOk, methodsOk)(r)))
+
 }

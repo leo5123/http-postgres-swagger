@@ -9,7 +9,7 @@ Iniciar a imagem docker:
 $ docker-compose up
 ```
 
-##### Serviço do postgre será iniciado em:   
+##### A api será iniciada em:   
 > http://localhost:5050/
 
 ##### Serviço do swagger será iniciado em: 

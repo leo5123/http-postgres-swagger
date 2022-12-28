@@ -9,12 +9,14 @@ Iniciar a imagem docker:
 $ docker-compose up
 ```
 
-##### A api será iniciada em:   
+#### A api será iniciada em:   
 > http://localhost:5050/
 
-##### Serviço do swagger será iniciado em: 
+#### Serviço do swagger será iniciado em: 
 > http://localhost:81
 
+#### Serviço do swagger será iniciado em: 
+>Testes localizados em main_test.go
 
 Instalar dependencias do projeto e iniciar aplicação na porta 5050
 ```

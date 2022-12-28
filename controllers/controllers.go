@@ -49,7 +49,7 @@ func DeletaUmaTarefa(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode("Tarefa " + id + " deletada")
 }
 
-func PersonalidadeFiltrada(w http.ResponseWriter, r *http.Request) {
+func TarefaFiltrada(w http.ResponseWriter, r *http.Request) {
 	var tarefa []models.Tarefa
 	filtro := r.URL.Query().Get("filtro")
 

@@ -17,7 +17,7 @@ func HandleRequest() {
 	r.HandleFunc("/", controllers.Home)
 	r.HandleFunc("/api/tarefas", controllers.TodasAsTarefas).Methods("Get")
 	r.HandleFunc("/api/tarefas/{id}", controllers.TarefaPorId).Methods("Get")
-	r.HandleFunc("/api/tarefas/tarefa", controllers.PersonalidadeFiltrada).Methods("Post")
+	r.HandleFunc("/api/tarefas/tarefa", controllers.TarefaFiltrada).Methods("Post")
 	r.HandleFunc("/api/tarefas", controllers.CriaUmaTarefa).Methods("Post")
 	r.HandleFunc("/api/tarefas/{id}", controllers.EditarUmaTarefa).Methods("Put")
 	r.HandleFunc("/api/tarefas/{id}", controllers.DeletaUmaTarefa).Methods("Delete")

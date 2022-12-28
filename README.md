@@ -10,7 +10,7 @@ $ docker-compose up
 ```
 
 ##### Serviço do postgre será iniciado em:   
-> http://localhost:54321/
+> http://localhost:5050/
 
 ##### Serviço do swagger será iniciado em: 
 > http://localhost:81

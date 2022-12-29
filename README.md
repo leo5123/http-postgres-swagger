@@ -4,9 +4,11 @@ API que serve como o back-end de uma aplicação TO DO list.
 	
 ## Setup
 
-Iniciar a imagem docker:
+Inicializar o projeto:
+* Windows
 ```
-$ docker-compose up
+$ cd ToDoListAPI-go-postgres
+$ docker-compose up 
 ```
 
 #### A api será iniciada em:   
@@ -14,15 +16,9 @@ $ docker-compose up
 
 #### Serviço do swagger será iniciado em: 
 > http://localhost:81
-
-#### Serviço do swagger será iniciado em: 
 >Testes localizados em main_test.go
 
-Instalar dependencias do projeto e iniciar aplicação na porta 5050
-```
-$ cd ToDoListAPI-go-postgres
-$ go run main.go 
-```
+
 
 ### Exemplo de método disponivel:
 > http://localhost:5050/api/tarefas

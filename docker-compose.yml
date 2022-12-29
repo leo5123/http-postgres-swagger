@@ -30,3 +30,18 @@ services:
       - ./swagger/openapi.yaml:/openapi.yaml
     environment:
       SWAGGER_JSON: /openapi.yaml
+
+  app:
+    image: golang:1.19-alpine
+    build: ./DESAFIO-PUB
+    container_name: api-backend
+    command: [ "go", "run", "main.go" ]
+    ports:
+      - 5050:5050
+    depends_on:
+      - postgres
+      - pgadmin-compose
+    working_dir: /DESAFIO-PUB
+    volumes:
+      - ./:/DESAFIO-PUB
+    restart: on-failure

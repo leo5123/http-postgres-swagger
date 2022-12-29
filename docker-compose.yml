@@ -33,7 +33,7 @@ services:
 
   app:
     image: golang:1.19-alpine
-    build: ./DESAFIO-PUB
+    build: ./ToDoListAPI-go-postgres
     container_name: api-backend
     command: [ "go", "run", "main.go" ]
     ports:
@@ -41,7 +41,7 @@ services:
     depends_on:
       - postgres
       - pgadmin-compose
-    working_dir: /DESAFIO-PUB
+    working_dir: /ToDoListAPI-go-postgres
     volumes:
-      - ./:/DESAFIO-PUB
+      - ./:/ToDoListAPI-go-postgres
     restart: on-failure

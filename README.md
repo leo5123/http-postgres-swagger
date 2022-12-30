@@ -5,7 +5,7 @@ API que serve como o back-end de uma aplicação TO DO list.
 ## Setup
 
 Inicializar o projeto:
-* Windows
+
 ```
 $ cd ToDoListAPI-go-postgres
 $ docker-compose up 

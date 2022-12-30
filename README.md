@@ -8,7 +8,7 @@ Inicializar o projeto:
 
 ```
 $ cd ToDoListAPI-go-postgres
-$ docker-compose up 
+$ sh init.sh
 ```
 
 #### A api será iniciada em:   
